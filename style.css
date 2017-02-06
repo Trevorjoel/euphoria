@@ -40,7 +40,10 @@ Defaults
 
 /* Typographical Elements
 --------------------------------------------- */
-
+@font-face {
+    font-family: Monastic Pro;
+    src: url(MonasticPro.ttf);
+}
 html {
 	font-size: 62.5%; /* 10px browser default */
 }
@@ -81,6 +84,7 @@ a:focus {
 p {
 	margin: 0 0 24px;
 	padding: 0;
+	color: #C8B99E;
 }
 
 strong {
@@ -232,14 +236,23 @@ h1 {
 
 h2 {
 	font-size: 30px;
+	color: #C9BCA5;
+	text-align:center;
+	
+	background: #2F2C6C4D;
+    border-radius: 3px;
+    padding: 10px;
 }
 
 h3 {
 	font-size: 24px;
+
 }
 
 h4 {
 	font-size: 20px;
+	color: #C9BCA5;
+
 }
 
 h5 {
@@ -602,74 +615,21 @@ border-top-right-radius: 20px;
 	font-style: italic;
 	font-weight: 300;
 	margin: 0;
+	float: right;
+	margin-right: 25px;
+margin-top: 25px;
 }
 
 
 /*
 Site Navigation
 ---------------------------------------------------------------------------------------------------- */
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
 
-.omega-nav-menu {
-	clear: both;
-	color: #999;
-	line-height: 1.5;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	text-align: center;
-}
 
-.omega-nav-menu li {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-}
 
-.omega-nav-menu a {
-	border: none;
-	display: block;
-	padding: 28px 24px;
-	position: relative;
-}
-
-.omega-nav-menu ul {
-	left: -9999px;
-	margin: 0;
-	opacity: 0;
-	padding: 0;
-	position: absolute;
-	-webkit-transition: opacity .4s ease-in-out;
-	-moz-transition:    opacity .4s ease-in-out;
-	-ms-transition:     opacity .4s ease-in-out;
-	-o-transition:      opacity .4s ease-in-out;
-	transition:         opacity .4s ease-in-out;	
-	width: 200px;
-	z-index: 99;
-}
-
-.omega-nav-menu ul a {
-	background: #fff;
-	border: 1px solid #eee;
-	border-top: none;
-	font-size: 14px;
-	padding: 16px 20px;
-	position: relative;
-	width: 200px;
-}
-
-.omega-nav-menu ul ul {
-	margin: -54px 0 0 199px;
-}
-
-.omega-nav-menu li:hover {
-	position: static;
-}
-
-.omega-nav-menu li:hover > ul {
-	left: auto;
-	opacity: 1;
-}
 
 /*
 Content Area
@@ -1233,19 +1193,24 @@ input#subscribe-field {
   background: -moz-radial-gradient(#63207f, #672080, #251c51); /* For Firefox 3.6 to 15 */
   background: radial-gradient(#63207f, #672080, #251c51); /* Standard syntax */
 	border: none ;
-	float: none ;
+	float: left ;
 	font-family: Monastic Pro;
-	font-size:90%;
+	font-size:100%;
 	padding-top:0px;
 	padding-bottom:0px;
-	
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.navbar-header{
+	width: 10%;
 }
 .logo {
 	padding-bottom:10px; 
 	margin-top:20px;
 	margin-left: 20px;
 	font-size: 75%;
-	width:100%;
+	width:130px;
 	
 	
 }
@@ -1272,9 +1237,10 @@ li.eesti{
 .container_content{
 	margin-left: auto ;
   margin-right: auto ;
-	margin-top:15px;
-	width: 70%;
+	margin-top:80px;
+	width: 80%;
 }
+
 .nav-bar-brand{
 	margin-left:0px;
 	margin-right:0px;
@@ -1285,34 +1251,27 @@ li.eesti{
 }
 
 .navbar-right {
-   width: 84%;
+   width: 82%;
 	display: block;
 	float:left;
-	padding-bottom: 10px;
+	padding-bottom: 0px;
+padding-top: 14px;
+	
+
    
 }
-
-.w3-section {
-    margin-top: 16px!important;
-    margin-bottom: 16px!important;
-    }
-.mySlides {display:none}
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
-
-element.style {
-    width: 800px;
+.navbar-inverse .navbar-nav > li > a{
+	line-height: 5px;
 }
-.w3-container slider{
-	margin-right: 100px;
-	
-	
+.collapse{
+
 }
+
 .news{
 	background: -webkit-radial-gradient(#46276D, #11061A, #290E32, #000); /* Safari 5.1 to 6.0 */
   background: -o-radial-gradient(#46276D, #11061A, #290E32, #000); /* For Opera 11.6 to 12.0 */
   background: -moz-radial-gradient(#46276D, #11061A, #290E32, #000); /* For Firefox 3.6 to 15 */
-  background: radial-gradient(#46276D, #11061A, #290E32, #000); /* Standard syntax */
+  background: radial-gradient(rgb(53, 25, 84), rgba(59, 32, 74, 0.92), rgba(43, 17, 74, 0.93), rgba(0, 0, 0, 0.95)); /* Standard syntax */
 	-webkit-box-shadow: 1px 2px 3px 4px #0a0a0a;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:    1px 2px 3px 4px #0a0a0a;  /* Firefox 3.5 - 3.6 */
   box-shadow:         1px 2px 3px 4px #0a0a0a;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
@@ -1320,14 +1279,10 @@ border-radius: 5px;
 padding: 10px;
 margin:0px;
 margin-bottom: 40px;
-
+(rgb(53, 25, 84), rgba(59, 32, 74, 0.92), rgba(43, 17, 74, 0.93), rgba(0, 0, 0, 0.95))
 }
 h2 {
-	text-align:center;
-	color: #B970D8;
-	background: #2F2C6C4D;
-    border-radius: 3px;
-    padding: 10px;
+	
 }
 .title h1{
 	color: #75578C;
@@ -1344,6 +1299,8 @@ h2 {
 	height: auto;
 	display: ;
     margin: 0 auto;
+    border-radius: 7px;
+    margin-top: -16px;
 }
 
 .news-thumb img {
@@ -1357,19 +1314,36 @@ h2 {
 width: auto\9;
 }
 ul {
-	width: 100%;
+	margin-top: 7px;
+	width: auto;
 	margin-left: 10px;
     display: block;
 }
 p {
-	color:#7E7462;
+	color:#C9BCA5;
 }
 .navbar-toggle{
-	position: inherit;
-	margin-top: -60px;
+	
+	margin-top: 1%;
+	margin-right: 7%;
+	float: right;
 }
 .entry-comments, #respond {
     background: #2F2C6C4D;
     border-radius: 3px;
     padding: 10px;
+}
+#primary-menu ul{
+
+}
+h2{
+	font-family: Monastic Pro;
+}
+
+@media only screen and (max-width: 500px){
+	.container_content{
+		width:98%;
+  		margin-left: 0px;
+    	margin-right: 0px;
+	}
 }

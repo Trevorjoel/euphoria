@@ -4,4 +4,3 @@
  *Template Name: News and events
  *
  */
-

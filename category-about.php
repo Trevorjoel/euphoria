@@ -1,4 +1,1 @@
-<?php 
-
-echo "One";
-?>
+<?php ;
